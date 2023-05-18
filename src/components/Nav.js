@@ -2,15 +2,23 @@ import React from 'react'
 import { login, logout } from '../services/firebase'
 import { Link } from 'react-router-dom'
 
-const Nav = () => {
+const Nav = (props) => {
   return (
     <nav className='nav'>
         <Link to='/'>
             <div className='nav-title'>Curate</div>
         </Link>
         <ul>
-            <li onClick={login}>Login</li>
-            <li onClick={logout}>Logout</li>
+            {
+                props.user ?
+                <>
+                <li>Welcome, {props.user.displayName}</li>
+                <li><img src={props.user.photoURL} alt={props.user.displayName}/></li>
+                <li onClick={logout}>Logout</li>
+                </>
+                :
+                <li onClick={login}>Login</li>
+            }
         </ul>
     </nav>
   )

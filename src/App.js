@@ -21,8 +21,8 @@ function App() {
 
   return (
     <div className="App">
-      <Nav />
-      <Main />
+      <Nav user={user}/>
+      <Main user={user}/>
     </div>
   );
 }
