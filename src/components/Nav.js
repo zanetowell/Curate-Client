@@ -15,6 +15,7 @@ const Nav = (props) => {
                 <li>Welcome, {props.user.displayName}</li>
                 <li><img src={props.user.photoURL} alt={props.user.displayName}/></li>
                 <li onClick={logout}>Logout</li>
+                <Link to='/topics'>Dashboard</Link>
                 </>
                 :
                 <li onClick={login}>Login</li>
