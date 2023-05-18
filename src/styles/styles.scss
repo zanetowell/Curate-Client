@@ -1,0 +1,47 @@
+$boldcolor: #5d7d4c;
+
+.App {
+    background: rgb(214,207,186);
+    background: linear-gradient(30deg, rgba(214,207,186,1) 22%, rgba(239,232,218,1) 90%);
+    height: 100vh;
+    width: 100vw;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $boldcolor;
+    color: white;
+
+    ul {
+        list-style:none;
+        display: flex;
+        align-items: center;
+        
+        li {
+            margin-right: 1.5rem;
+            cursor: pointer;
+        }
+
+        .nav-user-bar {
+            display: flex;
+            align-items: center;
+            cursor: default;
+        }
+
+        .nav-user-img {
+            border-radius: 50%;
+            height: 2rem;
+            margin: 0 1rem;
+        }
+    }
+}
+
+.nav-title {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: x-large;
+    margin-left: 1rem;
+}

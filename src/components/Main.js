@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import { Route, Routes } from 'react-router-dom'
 import Dashboard from '../pages/Dashboard'
+import Topic from '../pages/Topic'
 import Welcome from '../pages/Welcome'
 
 const Main = (props) => {
@@ -21,6 +22,7 @@ const Main = (props) => {
         <Routes>
             <Route path='/' element={<Welcome topics={topics}/>} />
             <Route path='/topics' element={<Dashboard topics={topics}/>} />
+            <Route path='/topics/:id' element={<Topic topics={topics}/>} />
         </Routes>
     </div>
   )
