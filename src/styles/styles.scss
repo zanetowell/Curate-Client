@@ -45,3 +45,33 @@ nav {
     font-size: x-large;
     margin-left: 1rem;
 }
+
+.topic {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: px;
+}
+    
+.topic-link {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+.topic-link:hover {
+    text-decoration: underline;
+    color: black;
+    cursor: pointer;
+}
+
+.topic-name { 
+    grid-area: 1 / 1 / 2 / 2; 
+    margin: 50px auto
+}
+
+.topic-description { 
+    grid-area: 1 / 2 / 2 / 3; 
+    margin: 50px auto
+}

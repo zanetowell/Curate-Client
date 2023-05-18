@@ -12,7 +12,6 @@ const Main = (props) => {
         const response = await fetch(URL)
         const data = await response.json()
         setTopics(data)
-        console.log(data);
     }
 
     useEffect(()=> {getTopics()}, [])
