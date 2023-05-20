@@ -1,12 +1,14 @@
 import React from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 
 const Topic = (props) => {
     const { id } = useParams()
     const navigate = useNavigate()
     const topics = props.topics
-    
+    const cards = props.cards
+
     const topic = topics ? topics.find((t) => t._id === id ) : null
   
     const [ editForm, setEditForm ] = useState(topic)
@@ -43,6 +45,24 @@ const Topic = (props) => {
     navigate('/')
   }
 
+
+  const cardsLoaded = () => {
+    return props.cards.map((card) => (
+        <div className="card">
+            <div className='card-front'>
+                <h2>{card.front}</h2>
+            </div>
+            <div className='card-back'>
+                <h2>{card.back}</h2>
+            </div>
+        </div>
+    ));
+  };
+
+  const cardsLoading = () => {
+    return <h1>Loading Cards...</h1>;
+  };
+
   const loaded = () => {
     return (
       <>
@@ -51,11 +71,18 @@ const Topic = (props) => {
         <br />
         <button onClick={handleEdit}>{ isEditing ? 'Cancel Edit' : 'Edit'}</button>
         <button onClick={handleDelete}>Delete</button>
+        <div className='study-materials-list'>
+            <div className='create-card-link'>
+                <Link to={`/cards`}className='card-link' cards={cards}><h2>Create a Flashcard</h2></Link>
+            </div>
+        { props.cards ? cardsLoaded() : cardsLoading() }
+        </div>
       </>
     );
   };
+
   const loading = () => {
-    return <h1>Loading ...</h1>;
+    return <h1>Loading...</h1>;
   };
 
   return (
