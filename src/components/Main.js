@@ -6,13 +6,16 @@ import Welcome from '../pages/Welcome'
 
 const Main = (props) => {
     const [topics, setTopics] = useState(null)
-    const URL="http://localhost:4000/topics"
+    const topicsURL="http://localhost:4000/topics/"
+
+    const [flashcards, setFlashcards] = useState(null)
+    const flashcardsURL="http://localhost:4000/topics/"
 
     const getTopics = async () => {
         if(!props.user) return;
         const token = await props.user.getIdToken()
 
-        const response = await fetch(URL, {
+        const response = await fetch(topicsURL, {
             method:'GET',
             headers: {
                 'Authorization': 'Bearer ' + token
@@ -25,7 +28,7 @@ const Main = (props) => {
     const createTopics = async (topic) => {
         if(!props.user) return;
         const token = await props.user.getIdToken()
-        await fetch(URL, {
+        await fetch(topicsURL, {
             method: "POST",
             headers: {
                 "Content-Type": "Application/json",
@@ -39,7 +42,7 @@ const Main = (props) => {
     const updateTopics = async (topic, id) => {
         if(!props.user) return;
         const token = await props.user.getIdToken()
-        await fetch(URL + id, {
+        await fetch(topicsURL + id, {
             method: "PUT",
             headers: {
                 "Content-Type": "Application/json",
@@ -53,7 +56,7 @@ const Main = (props) => {
     const deleteTopics = async id => {
         if(!props.user) return;
         const token = await props.user.getIdToken()
-        await fetch(URL + id, {
+        await fetch(topicsURL + id, {
           method: "DELETE",
           headers:  {
             'Authorization': 'Bearer ' + token
