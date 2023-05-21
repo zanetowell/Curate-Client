@@ -1,5 +1,4 @@
 import React, {useState} from 'react'
-import { Link } from 'react-router-dom';
 
 const CardDashboard = (props) => {
 
@@ -24,11 +23,11 @@ const CardDashboard = (props) => {
   // loaded function
   const loaded = () => {
     return props.cards.map((card) => (
-        <div key={card._id} className="card">
-            <div className='card-front'>
+        <div key={card._id} className="card-list">
+            <div className='card-dashboard-front'>
               <p>{card.front}</p>
             </div>
-            <div className='card-back'>
+            <div className='card-dashboard-back'>
               <p>{card.back}</p>
             </div>
         </div>

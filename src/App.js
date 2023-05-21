@@ -1,10 +1,10 @@
 import './App.css';
 import Nav from './components/Nav';
-import Dashboard from './pages/Dashboard';
-import Welcome from './pages/Welcome';
 import Main from './components/Main';
 import { useState, useEffect } from 'react';
 import { auth } from './services/firebase'
+import Lofi from './components/Lofi';
+
 
 
 function App() {
@@ -23,6 +23,7 @@ function App() {
   return (
     <div className="App">
       <Nav user={user}/>
+      <Lofi />
       <Main user={user}/>
     </div>
   );
