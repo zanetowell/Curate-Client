@@ -37,6 +37,12 @@ nav {
             text-decoration: none;
         }
 
+        .login-btn {
+            margin-right: 1.5rem;
+            font-weight: bolder;
+            cursor: pointer;
+        }
+
         #logout-btn {
             cursor: pointer;
         }
@@ -75,6 +81,25 @@ nav {
 
 .lofi {
     margin-bottom: 10px;
+}
+
+.welcome-page {
+    display: flex;
+    justify-content: center;
+}
+
+.welcome-title {
+    font-size: 60px
+}
+
+.welcome-divider {
+    display: inline-block;
+    height: 2px;
+    width: 40vw;
+    background-color: black;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .topic {

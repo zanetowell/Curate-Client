@@ -27,7 +27,7 @@ const Nav = (props) => {
                 </MDBDropdown>
                 </div>
                 :
-                <li onClick={login}>Login</li>
+                <h2 onClick={login} className='login-btn'>Login</h2>
             }
     </nav>
   )
