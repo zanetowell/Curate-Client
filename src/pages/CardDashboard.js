@@ -9,7 +9,7 @@ const CardDashboard = (props) => {
     })
 
     const handleChange = (evt) => {
-        setCardForm({ ...newCardForm, [evt.target.name]: evt.target.value})
+        setCardForm({ ...newCardForm, [evt.target.name]: evt.target.value.toUpperCase()})
     }
 
     const handleSubmit = (evt) => {
@@ -43,6 +43,13 @@ const CardDashboard = (props) => {
   return (
     <section>
       <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          value={newCardForm.topic}
+          name="topic"
+          placeholder="topic"
+          onChange={handleChange}
+        />
         <input
           type="text"
           value={newCardForm.front}

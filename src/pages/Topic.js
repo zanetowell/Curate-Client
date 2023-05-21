@@ -48,13 +48,16 @@ const Topic = (props) => {
 
   const cardsLoaded = () => {
     return props.cards.map((card) => (
-        <div className="card">
+        <div key={card._id} className='topic-cards-list'>
+            { card.topic === topic.name ?
+        <div className="topic-card">
             <div className='card-front'>
                 <h2>{card.front}</h2>
             </div>
             <div className='card-back'>
                 <h2>{card.back}</h2>
             </div>
+        </div> : null }
         </div>
     ));
   };

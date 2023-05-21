@@ -10,7 +10,7 @@ const Dashboard = (props) => {
     })
 
     const handleChange = (evt) => {
-        setNewForm({ ...newForm, [evt.target.name]: evt.target.value})
+        setNewForm({ ...newForm, [evt.target.name]: evt.target.value.toUpperCase()})
     }
 
     const handleSubmit = (evt) => {

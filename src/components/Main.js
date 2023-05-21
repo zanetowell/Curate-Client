@@ -147,7 +147,7 @@ const Main = (props) => {
              cards={cards} getCards={getCards} createCards={createCards} updateCards={updateCards} deleteCards={deleteCards}
              />} />
              <Route path='/cards' element={<CardDashboard 
-             cards={cards} getCards={getCards} createCards={createCards} updateCards={updateCards} deleteCards={deleteCards}
+             cards={cards} getCards={getCards} createCards={createCards} updateCards={updateCards} deleteCards={deleteCards} topics={topics}
              />} />
         </Routes>
     </div>

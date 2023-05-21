@@ -75,3 +75,31 @@ nav {
     grid-area: 1 / 2 / 2 / 3; 
     margin: 50px auto
 }
+
+.topic-cards-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.topic-card {
+    border: 2px solid black;
+    width: 300px;
+    transform-style: preserve-3d;
+    transition: all 0.8s ease;
+}
+
+.topic-card:hover {
+    transform: rotateY(180deg);
+}
+
+.card-front {
+    backface-visibility: hidden;
+    overflow: hidden;
+}
+
+.card-back {
+    backface-visibility: hidden;
+    overflow: hidden;
+    transform: rotateY(180deg);
+}
