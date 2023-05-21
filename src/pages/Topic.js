@@ -42,7 +42,7 @@ const Topic = (props) => {
 
   const handleDelete = () => {
     props.deleteTopics(topic._id)
-    navigate('/')
+    navigate('/topics')
   }
 
 

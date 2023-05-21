@@ -2,13 +2,27 @@ import React, {useState} from 'react'
 import { login, logout } from '../services/firebase'
 import { Link } from 'react-router-dom'
 import { MDBDropdown, MDBDropdownMenu, MDBDropdownToggle, MDBDropdownItem } from 'mdb-react-ui-kit';
+import { GrDown, GrVolume } from "react-icons/gr";
+import Lofi from './Lofi';
 
 const Nav = (props) => {
+
+  const [listening, setListening] = useState(false)
+
+  const handleClick = (evt) => {
+    setListening(prevState => !prevState)
+    
+  }
+
   return (
     <nav className='nav'>
         <Link to='/' className='nav-title'>
             <div>Curate</div>
         </Link>
+          <div className='lofi-icon' onClick={handleClick}>
+            <GrVolume id='lofi-btn'/>
+          </div>
+          {listening ? <Lofi /> : null}
             {
                 props.user ?
                 <div className='nav-drop'>
@@ -16,6 +30,7 @@ const Nav = (props) => {
                 <MDBDropdown>
                   <MDBDropdownToggle tag='p' className='btn btn-primary' id='drop-toggle'>
                     <img src={props.user.photoURL} alt={props.user.displayName}className='nav-user-img'/>
+                    <GrDown />
                   </MDBDropdownToggle>
                   <MDBDropdownMenu>
                     <MDBDropdownItem className='drop-item'><Link to='/' className='drop-link'>Profile</Link></MDBDropdownItem>

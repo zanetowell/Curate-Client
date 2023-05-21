@@ -9,6 +9,7 @@ $boldcolor: #5d7d4c;
     overflow-x: hidden;
 }
 
+// Nav styles
 nav {
     display: flex;
     justify-content: space-between;
@@ -28,6 +29,7 @@ nav {
             list-style: none;
             color: black;
             margin-right: 1.5rem;
+            margin-top: 10px;
             padding-top: 10px;
             font-weight: bold;
         }
@@ -63,13 +65,12 @@ nav {
             background-color: #5d7d4c;
             border: none;
             box-shadow: none;
-        }
-
-        .drop-item {
-            margin-left: 6px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
     }
-
 
 .nav-title {
     color: white;
@@ -79,10 +80,18 @@ nav {
     margin-left: 1rem;
 }
 
+// Lofi styles
 .lofi {
     margin-bottom: 10px;
+    text-align: center;
 }
 
+#lofi-btn {
+    font-size: x-large;
+    margin: 0 auto;
+}
+
+// Welcome page styles
 .welcome-page {
     display: flex;
     justify-content: center;
@@ -102,6 +111,7 @@ nav {
     margin-bottom: 20px;
 }
 
+// Topic Dashboard styles
 .topic {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -110,6 +120,34 @@ nav {
     grid-row-gap: px;
 }
     
+.add-topic-toggle {
+    font-size: large;
+    background-color: rgba(181, 173, 149, 0.2);
+    border-radius: 15px;
+    padding: 5px;
+    margin-bottom: 3px;
+}
+
+.topic-name-input {
+    background-color: rgba(181, 173, 149, 0.2);
+    border-radius: 15px;
+    padding: 5px;
+    margin-right: 5px;
+}
+
+.topic-desc-input {
+    background-color: rgba(181, 173, 149, 0.2);
+    border-radius: 15px;
+    padding: 5px;
+    margin-right: 5px;
+}
+
+.add-topic-btn {
+    background-color: rgba(181, 173, 149, 0.2);
+    border-radius: 15px;
+    padding: 5px;
+}
+
 .topic-link {
     text-decoration: none;
     color: black;
@@ -122,14 +160,35 @@ nav {
     cursor: pointer;
 }
 
+.dashboard-headers {
+    display: flex;
+    justify-content: space-around;
+    font-size: 35px;
+    margin-top: 100px;
+}
+
+.dash-header-dividers {
+    display: flex;
+    flex-direction:column-reverse;
+    background-color: black;
+    height: 2px;
+    width: 300px;
+}
+
 .topic-name { 
     grid-area: 1 / 1 / 2 / 2; 
-    margin: 50px auto
+    margin: 40px auto;
+    background-color: rgba(181, 173, 149, 0.2);
+    width: 100%;
+    height: 60%;
 }
 
 .topic-description { 
     grid-area: 1 / 2 / 2 / 3; 
-    margin: 50px auto
+    margin: 40px auto;
+    background-color: rgba(181, 173, 149, 0.2);
+    width: 100%;
+    height: 60%;
 }
 
 .topic-cards-list {
@@ -138,6 +197,7 @@ nav {
     align-items: center;
 }
 
+// Topic show page styles
 .topic-card {
     border: 2px solid black;
     border-radius: 20px;

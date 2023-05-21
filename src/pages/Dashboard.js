@@ -23,6 +23,12 @@ const Dashboard = (props) => {
         })
     }
 
+    const [isAdding, setIsAdding] = useState(false)
+
+    const handleAdd = () => {
+      setIsAdding(prevState => !prevState)
+    }
+
   // loaded function
   const loaded = () => {
     return props.topics.map((topic) => (
@@ -44,6 +50,8 @@ const Dashboard = (props) => {
 
   return (
     <section>
+      <button onClick={handleAdd} className='add-topic-toggle'>{ isAdding ? 'Cancel Creation' : 'Create'}</button>
+      {isAdding &&
       <form onSubmit={handleSubmit}>
         <input
           type="text"
@@ -51,13 +59,7 @@ const Dashboard = (props) => {
           name="name"
           placeholder="name"
           onChange={handleChange}
-        />
-        <input
-          type="text"
-          value={newForm.icon}
-          name="icon"
-          placeholder="icon"
-          onChange={handleChange}
+          className="topic-name-input"
         />
         <input
           type="text"
@@ -65,9 +67,19 @@ const Dashboard = (props) => {
           name="description"
           placeholder="description"
           onChange={handleChange}
+          className="topic-desc-input"
         />
-        <input type="submit" value="Add Topic" />
+        <input type="submit" value="Add Topic" className="add-topic-btn"/>
       </form>
+      }
+      <div className='dashboard-headers'>
+        <div className='dash-header-dividers'>
+          <h1 className='topics-header'>Topics</h1>
+        </div>
+        <div className='dash-header-dividers'>
+          <h1 className='topics-desc-header'>Descriptions</h1>
+        </div>
+      </div>
       {props.topics ? loaded() : loading()}
     </section>
   );
