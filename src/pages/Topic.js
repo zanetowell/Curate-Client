@@ -2,6 +2,7 @@ import React from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import Sidebar from '../components/Sidebar'
 
 const Topic = (props) => {
     const { id } = useParams()
@@ -90,7 +91,7 @@ const Topic = (props) => {
 
   return (
     <div className="show-topic">
-      { topic ? loaded() : loading() }
+      <div className="show-topic-form">
       { isEditing &&
       <form onSubmit={handleUpdate}>
         <input
@@ -117,6 +118,9 @@ const Topic = (props) => {
         <input type="submit" value="Update Topic" />
       </form>
     }
+    </div>
+    { topic ? loaded() : loading() }
+    <Sidebar />
     </div>
   )
 }
