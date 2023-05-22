@@ -10,9 +10,9 @@ A personalized studying app that allows users to upload different types of revie
 
 - Express.js  
 
-- Node.js  
+- React.js   
 
-- React.js  
+- Node.js  
 
 - Sass  
 
