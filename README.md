@@ -30,7 +30,7 @@ A personalized studying app that allows users to upload different types of revie
 
 ## Getting Started  
 
-[Deployed Project] 
+[Deployed Project](https://curate-dev.netlify.app/)
 
 Begin by logging in with your Google account in the top right corner. Then make a topic and begin making your study materials. Materials must have the same name as the topic!  
 
