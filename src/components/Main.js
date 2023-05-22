@@ -10,7 +10,8 @@ import Archives from '../pages/Archives'
 
 const Main = (props) => {
     const [topics, setTopics] = useState(null)
-    const topicsURL="http://localhost:4000/topics/"
+    // const topicsURL="http://localhost:4000/topics/"
+    const topicsURL="https://curate-server.onrender.com/topics/"
 
     const getTopics = async () => {
         if(!props.user) return;
@@ -74,7 +75,8 @@ const Main = (props) => {
 /////////////////////////////////////////
 
     const [cards, setCards] = useState(null)
-    const cardsURL="http://localhost:4000/cards/"
+    // const cardsURL="http://localhost:4000/cards/"
+    const cardsURL="https://curate-server.onrender.com/cards/"
 
         const getCards = async () => {
             if(!props.user) return;
