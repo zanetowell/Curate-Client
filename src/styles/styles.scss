@@ -58,7 +58,7 @@ nav {
             border: 1px solid white;
             border-radius: 33%;
             height: 3rem;
-            margin: 0 2rem;
+            margin: 0 3.5rem;
         }
 
         #drop-toggle {
@@ -76,13 +76,14 @@ nav {
     color: white;
     text-decoration: none;
     cursor: pointer;
-    font-size: xx-large;
+    font-size: 60px;
     margin-left: 1rem;
 }
 
 // Lofi styles
 .lofi {
-    margin-bottom: 10px;
+    margin-top: 4px;
+    margin-bottom: 3px;
     text-align: center;
 }
 
@@ -128,24 +129,19 @@ nav {
     margin-bottom: 3px;
 }
 
-.topic-name-input {
+.form-input {
     background-color: rgba(181, 173, 149, 0.2);
     border-radius: 15px;
     padding: 5px;
     margin-right: 5px;
 }
 
-.topic-desc-input {
-    background-color: rgba(181, 173, 149, 0.2);
+.form-btn {
+    background-color: rgba(181, 173, 149, 0.4);
     border-radius: 15px;
-    padding: 5px;
-    margin-right: 5px;
-}
-
-.add-topic-btn {
-    background-color: rgba(181, 173, 149, 0.2);
-    border-radius: 15px;
-    padding: 5px;
+    padding: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
 }
 
 .topic-link {
@@ -240,4 +236,56 @@ nav {
     height: 86vh;
     width: 15vw;
     background-color: rgba(181, 173, 149, 0.4);
+}
+
+// Card Dashboard styles
+.card-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    column-gap: 2px;
+}
+
+.flashcard {
+    border: 2px solid black;
+    border-radius: 20px;
+    width: 300px;
+    height: 150px;
+    margin: 20px auto;
+    background-color: rgba(181, 173, 149, 0.4);
+    box-shadow: 1px 2px 4px 1px rgba(0,0,0,0.63);
+    text-align: center;
+}
+
+.card-list-links {
+    color: black;
+    text-decoration: none;
+}
+
+.card-list-links:hover {
+    text-decoration: underline;
+}
+
+.card-dashboard-front, .card-dashboard-back {
+    font-size: x-large;
+}
+
+// Card Show page styles
+.show-card {
+    border: 2px solid black;
+    border-radius: 20px;
+    width: 300px;
+    height: 150px;
+    margin: 50px auto;
+    background-color: rgba(181, 173, 149, 0.4);
+    box-shadow: 1px 2px 4px 1px rgba(0,0,0,0.63);
+    text-align: center;
+}
+
+.show-card-btns {
+    margin-top: 50px;
+}
+
+.card-show-page {
+    margin-top: 100px;
 }

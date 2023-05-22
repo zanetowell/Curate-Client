@@ -59,7 +59,7 @@ const Dashboard = (props) => {
           name="name"
           placeholder="name"
           onChange={handleChange}
-          className="topic-name-input"
+          className="form-input"
         />
         <input
           type="text"
@@ -67,9 +67,9 @@ const Dashboard = (props) => {
           name="description"
           placeholder="description"
           onChange={handleChange}
-          className="topic-desc-input"
+          className="form-input"
         />
-        <input type="submit" value="Add Topic" className="add-topic-btn"/>
+        <input type="submit" value="Add Topic" className="form-btn"/>
       </form>
       }
       <div className='dashboard-headers'>

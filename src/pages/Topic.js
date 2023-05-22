@@ -26,7 +26,7 @@ const Topic = (props) => {
   const handleChange = (e) => {
     setEditForm( {
       ...editForm,
-     [e.target.name]: e.target.value 
+     [e.target.name]: e.target.value.toUpperCase() 
     })
   }
   
@@ -73,12 +73,9 @@ const Topic = (props) => {
         <h1>{topic.name}</h1>
         <h2>{topic.description}</h2>
         <br />
-        <button onClick={handleEdit}>{ isEditing ? 'Cancel Edit' : 'Edit'}</button>
-        <button onClick={handleDelete}>Delete</button>
+        <button onClick={handleEdit} className="form-btn">{ isEditing ? 'Cancel Edit' : 'Edit'}</button>
+        <button onClick={handleDelete} className="form-btn">Delete</button>
         <div className='study-materials-list'>
-            <div className='create-card-link'>
-                <Link to={`/cards`}className='card-link' cards={cards}><h2>Create a Flashcard</h2></Link>
-            </div>
         { props.cards ? cardsLoaded() : cardsLoading() }
         </div>
       </>
@@ -100,6 +97,7 @@ const Topic = (props) => {
           name="name"
           placeholder="name"
           onChange={handleChange}
+          className="form-input"
         />
         <input
           type="text"
@@ -107,6 +105,7 @@ const Topic = (props) => {
           name="icon"
           placeholder="icon"
           onChange={handleChange}
+          className="form-input"
         />
         <input
           type="text"
@@ -114,13 +113,14 @@ const Topic = (props) => {
           name="description"
           placeholder="description"
           onChange={handleChange}
+          className="form-input"
         />
-        <input type="submit" value="Update Topic" />
+        <input type="submit" value="Update Topic" className="form-btn"/>
       </form>
     }
     </div>
     { topic ? loaded() : loading() }
-    <Sidebar />
+    <Sidebar cards={cards}/>
     </div>
   )
 }

@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import { Link } from 'react-router-dom'
 
 const CardDashboard = (props) => {
 
@@ -22,17 +23,22 @@ const CardDashboard = (props) => {
 
   // loaded function
   const loaded = () => {
-    return props.cards.map((card) => (
-        <div key={card._id} className="card-list">
-            <div className='card-dashboard-front'>
-              <p>{card.front}</p>
+    return (
+      <div className='card-list'>
+      {props.cards.map((card) => (
+        <div key={card._id} className="flashcard">
+          <Link to={`/cards/${card._id}`} className='card-list-links'>
+            <div>
+              <p className='card-dashboard-front'>{card.front}</p>
             </div>
-            <div className='card-dashboard-back'>
-              <p>{card.back}</p>
+            <div>
+              <p className='card-dashboard-back'>{card.back}</p>
             </div>
+            </Link>
         </div>
-    ));
-    
+    ))}
+    </div>
+    )
   };
 
   const loading = () => {
@@ -48,6 +54,7 @@ const CardDashboard = (props) => {
           name="topic"
           placeholder="topic"
           onChange={handleChange}
+          className="form-input"
         />
         <input
           type="text"
@@ -55,6 +62,7 @@ const CardDashboard = (props) => {
           name="front"
           placeholder="front"
           onChange={handleChange}
+          className="form-input"
         />
         <input
           type="text"
@@ -62,8 +70,9 @@ const CardDashboard = (props) => {
           name="back"
           placeholder="back"
           onChange={handleChange}
+          className="form-input"
         />
-        <input type="submit" value="Add Flashcard" />
+        <input type="submit" value="Add Flashcard" className="form-btn"/>
       </form>
       {props.cards ? loaded() : loading()}
     </section>

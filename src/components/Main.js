@@ -4,6 +4,7 @@ import Dashboard from '../pages/Dashboard'
 import CardDashboard from '../pages/CardDashboard'
 import Topic from '../pages/Topic'
 import Welcome from '../pages/Welcome'
+import Flashcard from '../pages/Flashcard'
 
 const Main = (props) => {
     const [topics, setTopics] = useState(null)
@@ -71,7 +72,7 @@ const Main = (props) => {
 /////////////////////////////////////////
 
     const [cards, setCards] = useState(null)
-    const cardsURL="http://localhost:4000/cards"
+    const cardsURL="http://localhost:4000/cards/"
 
         const getCards = async () => {
             if(!props.user) return;
@@ -113,7 +114,7 @@ const Main = (props) => {
             })
             getCards()
         }
-    
+        
         const deleteCards = async id => {
             if(!props.user) return;
             const token = await props.user.getIdToken()
@@ -148,6 +149,9 @@ const Main = (props) => {
              />} />
              <Route path='/cards' element={<CardDashboard 
              cards={cards} getCards={getCards} createCards={createCards} updateCards={updateCards} deleteCards={deleteCards} topics={topics}
+             />} />
+             <Route path='/cards/:id' element={<Flashcard 
+             cards={cards} getCards={getCards} createCards={createCards} updateCards={updateCards} deleteCards={deleteCards}
              />} />
         </Routes>
     </div>

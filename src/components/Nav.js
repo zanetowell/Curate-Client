@@ -30,11 +30,12 @@ const Nav = (props) => {
                 <MDBDropdown>
                   <MDBDropdownToggle tag='p' className='btn btn-primary' id='drop-toggle'>
                     <img src={props.user.photoURL} alt={props.user.displayName}className='nav-user-img'/>
-                    <GrDown />
+                    <GrDown className='drop-btn'/>
                   </MDBDropdownToggle>
                   <MDBDropdownMenu>
                     <MDBDropdownItem className='drop-item'><Link to='/' className='drop-link'>Profile</Link></MDBDropdownItem>
-                    <MDBDropdownItem className='drop-item'><Link to='/topics' className='drop-link'>Dashboard</Link></MDBDropdownItem>
+                    <MDBDropdownItem className='drop-item'><Link to='/topics' className='drop-link'>Topics Dashboard</Link></MDBDropdownItem>
+                    <MDBDropdownItem className='drop-item'><Link to='/cards' className='drop-link'>Cards Dashboard</Link></MDBDropdownItem>
                     <MDBDropdownItem className='drop-item'><Link to='/' className='drop-link'>Archives</Link></MDBDropdownItem>
                     <MDBDropdownItem divider className='drop-item'/>
                     <MDBDropdownItem onClick={logout} className='drop-item' id='logout-btn'>Logout</MDBDropdownItem>

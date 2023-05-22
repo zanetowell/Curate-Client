@@ -1,8 +1,14 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-const Sidebar = () => {
+const Sidebar = (props) => {
+    const cards = props.cards
   return (
-    <div className='sidebar'>Sidebar</div>
+    <div className='sidebar'>
+        <div className='create-card-link'>
+            <Link to={`/cards`}className='card-link' cards={cards}><h2>Create a Flashcard</h2></Link>
+        </div>
+    </div>
   )
 }
 
