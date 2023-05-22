@@ -5,8 +5,8 @@ const Sidebar = (props) => {
     const cards = props.cards
   return (
     <div className='sidebar'>
-        <div className='create-card-link'>
-            <Link to={`/cards`}className='card-link' cards={cards}><h2>Create a Flashcard</h2></Link>
+        <div>
+            <Link to={`/cards`} className='create-card-link' cards={cards}><h2>Create a Flashcard</h2></Link>
         </div>
     </div>
   )

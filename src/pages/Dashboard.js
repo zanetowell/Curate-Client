@@ -37,7 +37,7 @@ const Dashboard = (props) => {
                 <Link to={`/topics/${topic._id}`}className='topic-link'><h1>{topic.name}</h1></Link>
             </div>
             <div className='topic-description'>
-                <h3><em>{topic.description}</em></h3>
+                <h2><em>{topic.description}</em></h2>
             </div>
         </div>
     ));

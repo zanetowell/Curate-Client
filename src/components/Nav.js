@@ -33,7 +33,7 @@ const Nav = (props) => {
                     <GrDown className='drop-btn'/>
                   </MDBDropdownToggle>
                   <MDBDropdownMenu>
-                    <MDBDropdownItem className='drop-item'><Link to='/' className='drop-link'>Profile</Link></MDBDropdownItem>
+                    <MDBDropdownItem className='drop-item'><Link to='/profile' className='drop-link' user={props.user}>Profile</Link></MDBDropdownItem>
                     <MDBDropdownItem className='drop-item'><Link to='/topics' className='drop-link'>Topics Dashboard</Link></MDBDropdownItem>
                     <MDBDropdownItem className='drop-item'><Link to='/cards' className='drop-link'>Cards Dashboard</Link></MDBDropdownItem>
                     <MDBDropdownItem className='drop-item'><Link to='/' className='drop-link'>Archives</Link></MDBDropdownItem>

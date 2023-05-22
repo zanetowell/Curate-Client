@@ -5,6 +5,7 @@ import CardDashboard from '../pages/CardDashboard'
 import Topic from '../pages/Topic'
 import Welcome from '../pages/Welcome'
 import Flashcard from '../pages/Flashcard'
+import Profile from '../pages/Profile'
 
 const Main = (props) => {
     const [topics, setTopics] = useState(null)
@@ -141,6 +142,7 @@ const Main = (props) => {
     <div>
         <Routes>
             <Route path='/' element={<Welcome topics={topics}/>} />
+            <Route path='/profile' element={<Profile user={props.user}/>} />
             <Route path='/topics' element={<Dashboard topics={topics} getTopics={getTopics} createTopics={createTopics} updateTopics={updateTopics} deleteTopics={deleteTopics}
             />} />
             <Route path='/topics/:id' element={<Topic

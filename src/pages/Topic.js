@@ -1,7 +1,6 @@
 import React from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
 import Sidebar from '../components/Sidebar'
 
 const Topic = (props) => {
@@ -70,11 +69,14 @@ const Topic = (props) => {
   const loaded = () => {
     return (
       <>
-        <h1>{topic.name}</h1>
-        <h2>{topic.description}</h2>
+        <div className='top-topic'>
+          <h1 className='topic-show-title'>{topic.name}</h1>
+            <div className='welcome-divider'></div>
+          <h2 className='topic-show-desc'>{topic.description}</h2>
+        </div>
         <br />
-        <button onClick={handleEdit} className="form-btn">{ isEditing ? 'Cancel Edit' : 'Edit'}</button>
-        <button onClick={handleDelete} className="form-btn">Delete</button>
+        <button onClick={handleEdit} className="form-btn" id='topic-edit-btn'>{ isEditing ? 'Cancel Edit' : 'Edit'}</button>
+        <button onClick={handleDelete} className="form-btn" id='topic-del-btn'>Delete</button>
         <div className='study-materials-list'>
         { props.cards ? cardsLoaded() : cardsLoading() }
         </div>
@@ -118,9 +120,9 @@ const Topic = (props) => {
         <input type="submit" value="Update Topic" className="form-btn"/>
       </form>
     }
-    </div>
-    { topic ? loaded() : loading() }
-    <Sidebar cards={cards}/>
+      </div>
+      { topic ? loaded() : loading() }
+      <Sidebar cards={cards}/>
     </div>
   )
 }
