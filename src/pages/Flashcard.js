@@ -23,7 +23,7 @@ const Flashcard = (props) => {
   const handleChange = (e) => {
     setEditForm( {
       ...editForm,
-     [e.target.name]: e.target.value.toUpperCase()
+     [e.target.name]: e.target.value.toLowerCase()
     })
   }
   

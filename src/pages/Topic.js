@@ -25,7 +25,7 @@ const Topic = (props) => {
   const handleChange = (e) => {
     setEditForm( {
       ...editForm,
-     [e.target.name]: e.target.value.toUpperCase() 
+     [e.target.name]: e.target.value.toLowerCase() 
     })
   }
   
@@ -116,6 +116,14 @@ const Topic = (props) => {
           placeholder="description"
           onChange={handleChange}
           className="form-input"
+        />
+        {/* <span className='archive-btn'>archive?</span> */}
+        <input
+        type='checkbox'
+        value={editForm.archived}
+        name='archived'
+        placeholder='archived'
+        onChange={handleChange}
         />
         <input type="submit" value="Update Topic" className="form-btn"/>
       </form>

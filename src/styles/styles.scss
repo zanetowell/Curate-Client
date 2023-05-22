@@ -247,11 +247,21 @@ nav {
     margin-top: 20px;
 }
 
+.archive-btn {
+    background-color: rgba(181, 173, 149, 0.2);
+    border: 1px solid black;
+    border-radius: 12px;
+    margin-top: 10px;
+    padding: 6px;
+    color: black;
+}
+
 .sidebar {
     position: absolute;
-    top: 14vh;
-    height: 86vh;
+    top: 25vh;
+    height: 60vh;
     width: 15vw;
+    border-radius: 15px;
     background-color: rgba(181, 173, 149, 0.4);
 }
 

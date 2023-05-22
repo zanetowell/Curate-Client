@@ -10,7 +10,7 @@ const Dashboard = (props) => {
     })
 
     const handleChange = (evt) => {
-        setNewForm({ ...newForm, [evt.target.name]: evt.target.value.toUpperCase()})
+        setNewForm({ ...newForm, [evt.target.name]: evt.target.value.toLowerCase()})
     }
 
     const handleSubmit = (evt) => {
@@ -32,7 +32,9 @@ const Dashboard = (props) => {
   // loaded function
   const loaded = () => {
     return props.topics.map((topic) => (
-        <div key={topic._id} className="topic">
+      <>
+        {topic.archived ? null :
+          <div key={topic._id} className="topic">
             <div className='topic-name'>
                 <Link to={`/topics/${topic._id}`}className='topic-link'><h1>{topic.name}</h1></Link>
             </div>
@@ -40,6 +42,7 @@ const Dashboard = (props) => {
                 <h2><em>{topic.description}</em></h2>
             </div>
         </div>
+      }</>
     ));
     
   };
