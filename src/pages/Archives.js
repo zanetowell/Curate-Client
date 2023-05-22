@@ -25,6 +25,8 @@ const Archives = (props) => {
     
       return (
         <section className='archived-topics'>
+            <h1 className='archive-title'>Archived Topics</h1>
+            <div className='welcome-divider'></div>
           {props.topics ? loaded() : loading()}
         </section>
       );

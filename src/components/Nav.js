@@ -32,7 +32,7 @@ const Nav = (props) => {
                     <img src={props.user.photoURL} alt={props.user.displayName}className='nav-user-img'/>
                     <GrDown className='drop-btn'/>
                   </MDBDropdownToggle>
-                  <MDBDropdownMenu>
+                  <MDBDropdownMenu id='drop-list'>
                     <MDBDropdownItem className='drop-item'><Link to='/profile' className='drop-link' user={props.user}>Profile</Link></MDBDropdownItem>
                     <MDBDropdownItem className='drop-item'><Link to='/topics' className='drop-link'>Topics Dashboard</Link></MDBDropdownItem>
                     <MDBDropdownItem className='drop-item'><Link to='/cards' className='drop-link'>Cards Dashboard</Link></MDBDropdownItem>
