@@ -8,13 +8,15 @@ const Topic = (props) => {
     const navigate = useNavigate()
     const topics = props.topics
     const cards = props.cards
-
+    
     const topic = topics ? topics.find((t) => t._id === id ) : null
   
     const [ editForm, setEditForm ] = useState(topic)
   
     const [ isEditing, setIsEditing ] = useState(false)
   
+    const [ isToggled, setIsToggled ] = useState(false)
+
     useEffect(()=>{
       if (topic) {
           setEditForm(topic)
@@ -45,6 +47,9 @@ const Topic = (props) => {
     navigate('/topics')
   }
 
+  const handleToggle = () => {
+    setIsToggled(prevState => !prevState)
+  }
 
   const cardsLoaded = () => {
     return props.cards.map((card) => (
@@ -117,14 +122,15 @@ const Topic = (props) => {
           onChange={handleChange}
           className="form-input"
         />
-        {/* <span className='archive-btn'>archive?</span> */}
+        <label className='archive-btn'>archive?
         <input
         type='checkbox'
-        value={editForm.archived}
         name='archived'
         placeholder='archived'
-        onChange={handleChange}
+        onClick={handleToggle}
+        checked={isToggled ? topic.archived = true : topic.archived = false}
         />
+        </label>
         <input type="submit" value="Update Topic" className="form-btn"/>
       </form>
     }
