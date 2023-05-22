@@ -48,6 +48,8 @@ Begin by logging in with your Google account in the top right corner. Then make 
 
 ## Credits  
 
-*[Favicon](https://icons8.com/icons/set/study)*
+*[Favicon](https://icons8.com/icons/set/study)*  
 
-*[Lofi Stream](https://www.youtube.com/@LofiGirl)*
+*[Lofi Stream](https://www.youtube.com/@LofiGirl)*  
+
+*[CSS Card Flip](https://youtu.be/OV8MVmtgmoY)*  
