@@ -14,6 +14,8 @@ A personalized studying app that allows users to upload different types of revie
 
 - Node.js  
 
+- Firebase  
+
 - Sass  
 
 - MDB React  
