@@ -4,6 +4,8 @@ A personalized studying app that allows users to upload different types of revie
 
 ## Created by: Zane Towell  
 
+[Trello Board](https://trello.com/b/agKyeRry/curate)  
+
 ## Technology used:  
 
 - MongoDB Atlas  
@@ -22,7 +24,7 @@ A personalized studying app that allows users to upload different types of revie
 
 ## Screenshots  
 
-![Index/Landing Page!](https://cdn.discordapp.com/attachments/1070216691415531520/1110238132063973476/Screenshot_2023-05-22_at_12.07.19_PM.png)  
+![Landing Page!](https://cdn.discordapp.com/attachments/1070216691415531520/1110238132063973476/Screenshot_2023-05-22_at_12.07.19_PM.png)  
 
 ![Index Page!](https://cdn.discordapp.com/attachments/1070216691415531520/1110238322858672168/Screenshot_2023-05-22_at_12.09.23_PM.png)  
 
